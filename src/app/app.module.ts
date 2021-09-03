@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { InputTextModule } from 'primeng/inputtext';
-
 import { AppComponent } from './app.component';
+import { ImportsModule } from './imports.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    InputTextModule
+    ImportsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

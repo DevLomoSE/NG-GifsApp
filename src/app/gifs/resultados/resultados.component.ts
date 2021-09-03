@@ -15,7 +15,7 @@ export class ResultadosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get results(): any{
+  get results() {
     return this.gifsService.results;
   }
 

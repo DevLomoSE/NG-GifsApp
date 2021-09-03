@@ -1,4 +1,6 @@
 <div class="col">
   <h3>Buscar:</h3>
-  <input type="text" pInputText placeholder="Buscar Gif..." />
+  <input type="text" pInputText placeholder="Buscar Gif..."
+          #txtBuscar
+            (keyup.enter)="buscar()" />
 </div>

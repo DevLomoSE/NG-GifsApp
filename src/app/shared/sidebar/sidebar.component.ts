@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Listbox } from 'primeng/listbox';
+import { GifsService } from 'src/app/gifs/services/gifs.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('listboxItem') listboxItem!: Listbox;
+
+  constructor(
+    private gifsService: GifsService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  get historial(): string[]{
+    return this.gifsService.historial;
+  }
+
+  listItemClicked(): void{
+    console.log(this.listboxItem.value);
   }
 
 }

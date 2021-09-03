@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GifsServiceService } from './gifs.service';
+import { GifsService } from './gifs.service';
 
 describe('GifsServiceService', () => {
-  let service: GifsServiceService;
+  let service: GifsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GifsServiceService);
+    service = TestBed.inject(GifsService);
   });
 
   it('should be created', () => {

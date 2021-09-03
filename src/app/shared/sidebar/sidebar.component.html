@@ -3,7 +3,9 @@
 
   <hr class="text-white" />
 
-  <div>
-    <a href="#">Dashboard</a>
-  </div>
+  <p-listbox [options]="historial" (onClick)="listItemClicked()" #listboxItem>
+    <ng-template let-historial pTemplate="item">
+      {{ historial | titlecase}}
+    </ng-template>
+  </p-listbox>
 </div>

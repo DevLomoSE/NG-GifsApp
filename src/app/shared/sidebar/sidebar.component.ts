@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit {
   }
 
   listItemClicked(): void{
-    console.log(this.listboxItem.value);
+    this.gifsService.buscarGifs(this.listboxItem.value);
   }
 
 }
